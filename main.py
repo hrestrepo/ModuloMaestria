@@ -32,11 +32,9 @@ def index():
 # Ruta para realizar la búsqueda
 @app.route('/buscar', methods=['POST'])
 def buscar():
-    print("Solicitud POST recibida")
+   
     tipo = request.form['tipo']
     valor = request.form['valor']
-    print(f"Tipo de busqueda: {tipo}")
-    print(f"Valor de busqueda: {valor}")
     conn = get_db_connection()
     registro = None
 
